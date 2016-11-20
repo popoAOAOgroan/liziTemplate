@@ -2,6 +2,7 @@
 var assetsControl = module.exports;
 var netData = require("../z_models/netData");
 var code = require("../z_util/code");
+var assets = require("../z_models/assetsData");
 
 var mockData = {
 	results :[
@@ -42,8 +43,10 @@ var mockData = {
 };
 
 assetsControl.getAssetsList = function(){
+	console.log('?');
+	assets.selectAllWithUser(1);
     var returnData = new netData(code.success, mockData,'资产列表');
-    return returnData;
+    return returnData; 
 }
 
 assetsControl.addAssets = function(){
