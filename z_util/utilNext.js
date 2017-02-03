@@ -30,10 +30,10 @@ utilNext.utilSend = function(netData,res,next)
     res.netData = netData;
     res.send(netData);
     var error = null;
-    if(netData.code !== code.success)
-    {
-        error = new Error(JSON.stringify(netData));
-    }
+    // if(netData.code !== code.success)
+    // {
+    //     error = new Error(JSON.stringify(netData));
+    // }
     next(error);
 }
 
